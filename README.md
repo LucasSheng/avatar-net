@@ -1,6 +1,6 @@
 # Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration
 
-[teaser]: .docs/figures/teaser.png
+[teaser]: ./docs/figures/teaser.png
 ![teaser]
 <p align = 'center'>
 Exemplar stylized results by the proposed Avatar-Net, which faithfully transfers the lena image by arbitrary style.
@@ -12,7 +12,7 @@ Zero-shot artistic style transfer is an important image synthesis problem aiming
 
 The key ingredient of our method is a __style decorator__ that makes up the content features by semantically aligned style features from an arbitrary style image, which does not only holistically match their feature distributions but also preserve detailed style patterns in the decorated features.
 
-[style_decorator]: .docs/figures/style_decorator.png
+[style_decorator]: ./docs/figures/style_decorator.png
 ![style_decorator]
 <p align = 'center'>
 Comparison of feature distribution transformation by different feature transfer modules. (a) <a href="https://arxiv.org/abs/1703.06868">Adaptive Instance Normalization</a>, (b) <a href="https://arxiv.org/abs/1705.08086">Whitening and Coloring Transform</a>, (c) <a href="https://arxiv.org/abs/1612.04337">Style-Swap</a>, and (d) the proposed style decorator.
@@ -20,7 +20,7 @@ Comparison of feature distribution transformation by different feature transfer 
 
 By embedding this module into an image reconstruction network that fuses multi-scale style abstractions, the Avatar-Net renders multi-scale stylization for any style image in one feed-forward pass. 
 
-[network]: .docs/figures/network_architecture_with_comparison.png
+[network]: ./docs/figures/network_architecture_with_comparison.png
 ![network]
 <p align = 'center'>
 (a) Stylization comparison by autoencoder and style-augmented hourglass network. (b) The network architecture of the proposed method.
@@ -30,7 +30,7 @@ By embedding this module into an image reconstruction network that fuses multi-s
 
 We demonstrate the state-of-the-art effectiveness and efficiency of the proposed method in generating high-quality stylized images, with a series of successive applications including multiple style integration, video stylization and etc.
 
-[image_results]: .docs/figures/image_results.png
+[image_results]: ./docs/figures/image_results.png
 ![image_results]
 
 ### Comparison with Prior Arts
@@ -53,15 +53,15 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 
 ### Applications
 #### Multi-style Interpolation
-[style_interpolation]: .docs/figures/style_interpolation.png
+[style_interpolation]: ./docs/figures/style_interpolation.png
 ![style_interpolation]
 
 #### Content and Style Trade-off
-[trade_off]: .docs/figures/trade_off.png
+[trade_off]: ./docs/figures/trade_off.png
 ![trade_off]
 
 #### Video Stylization (click the image or [the Youtube link](https://youtu.be/amaeqbw6TeA))
-[video_snapshot]: .docs/figures/snapshot.png
+[video_snapshot]: ./docs/figures/snapshot.png
 [![video_snapshot]](https://youtu.be/amaeqbw6TeA)
 
 ## Code
