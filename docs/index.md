@@ -1,5 +1,3 @@
-# Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration
-
 [teaser]: ./figures/teaser.png
 ![teaser]
 <p align = 'center'>
