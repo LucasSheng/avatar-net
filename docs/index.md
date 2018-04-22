@@ -78,3 +78,4 @@ Lu Sheng, Ziyi Lin, Jing Shao and Xiaogang Wang, "Avatar-Net: Multi-scale Zero-s
     pages={1--9},
     year={2018}
 }
+```
