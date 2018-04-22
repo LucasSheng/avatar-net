@@ -35,7 +35,7 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 
 ### Comparison with Prior Arts
 
-<p align='center'><img src="figures/closed_ups.png" width="640"></p>
+<p align='center'><img src="./docs/figures/closed_ups.png" width="640"></p>
 
 - The result by Avatar-Net receives concrete multi-scale style patterns (e.g. color distribution, brush strokes and circular patterns in _candy_ image).
 
