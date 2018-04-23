@@ -16,7 +16,7 @@ The key ingredient of our method is a __style decorator__ that makes up the cont
 <small>Comparison of feature distribution transformation by different feature transfer modules. (a) <a href="https://arxiv.org/abs/1703.06868">Adaptive Instance Normalization</a>, (b) <a href="https://arxiv.org/abs/1705.08086">Whitening and Coloring Transform</a>, (c) <a href="https://arxiv.org/abs/1612.04337">Style-Swap</a>, and (d) the proposed style decorator.</small>
 </p>
 
-By embedding this module into an image reconstruction network that fuses multi-scale style abstractions, the Avatar-Net renders multi-scale stylization for any style image in one feed-forward pass. 
+By embedding this module into a reconstruction network that fuses multi-scale style abstractions, the Avatar-Net renders multi-scale stylization for any style image in one feed-forward pass. 
 
 [network]: ./figures/network_architecture_with_comparison.png
 ![network]
@@ -32,11 +32,11 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 ![image_results]
 <p align = 'center'><small>Exemplar stylized results by the proposed Avatar-Net.</small></p>
 
-### Comparison with Prior Arts
+#### Comparison with Prior Arts
 
 <p align='center'><img src="figures/closed_ups.png" width="600"></p>
 
-The result by Avatar-Net receives concrete multi-scale style patterns (e.g. color distribution, brush strokes and circular patterns in the style image). WCT distorts the brush strokes and circular patterns. AdaIN cannot even keep the color distribution, while style-swap fails in this example.
+<p align = 'center'><small>The result by Avatar-Net receives concrete multi-scale style patterns (e.g. color distribution, brush strokes and circular patterns in the style image). WCT distorts the brush strokes and circular patterns. AdaIN cannot even keep the color distribution, while style-swap fails in this example.</small></p>
 
 #### Execution Efficiency
 
@@ -88,7 +88,7 @@ The result by Avatar-Net receives concrete multi-scale style patterns (e.g. colo
 
 ## Code
 
-Please refer to the [GitHub repository]() for more details. 
+Please refer to the [GitHub repository](https://github.com/LucasSheng/avatar-net) for more details. 
 
 ## Publication
 
