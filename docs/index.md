@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 [teaser]: ./figures/teaser.png
 ![teaser]
 <p align = 'center'>
