@@ -1,7 +1,7 @@
 [teaser]: ./figures/teaser.png
 ![teaser]
-<p align = 'center', style="font-size:50%;">
-Exemplar stylized results by the proposed Avatar-Net, which faithfully transfers the lena image by arbitrary style.
+<p align = 'center'>
+    <small>Exemplar stylized results by the proposed Avatar-Net, which faithfully transfers the lena image by arbitrary style.</small>
 </p>
 
 ## Overview
