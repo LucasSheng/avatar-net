@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<h1 align = 'center'>Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration</h1> 
+
 [teaser]: ./figures/teaser.png
 ![teaser]
 <p align = 'center'>
