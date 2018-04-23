@@ -44,33 +44,6 @@ The result by Avatar-Net receives concrete multi-scale style patterns (e.g. colo
 | __256x256 (sec)__ | 12.18         | 0.053 | 0.62  | 0.064      | __0.071__      |
 | __512x512 (sec)__ | 43.25         | 0.11  | 0.93  | 0.23       | __0.28__       |
 
-<table>
-<thead>
-<tr>
-<th>Artist</th>
-<th>Album</th>
-<th>Year</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Michael Jackson</td>
-<td>Thriller</td>
-<td>1982</td>
-</tr>
-<tr>
-<td>Prince</td>
-<td>Purple Rain</td>
-<td>1984</td>
-</tr>
-<tr>
-<td>Beastie Boys</td>
-<td>License to Ill</td>
-<td>1986</td>
-</tr>
-</tbody>
-</table>
-
 - Avatar-Net has a comparable executive time as AdaIN and GPU-accelerated Style-Swap, and is much faster than WCT and the optimization-based style transfer by Gatys _et. al._.
 
 - The reference methods and the proposed Avatar-Net are implemented on a same TensorFlow platform with a same VGG network as the backbone.
