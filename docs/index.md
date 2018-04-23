@@ -2,11 +2,9 @@
 layout: default
 ---
 
-<h1 align = 'center'>Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration</h1> 
-
 [teaser]: ./figures/teaser.png
 ![teaser]
-<p align = 'center'>
+<p align = 'center', style="font-size:50%;">
 Exemplar stylized results by the proposed Avatar-Net, which faithfully transfers the lena image by arbitrary style.
 </p>
 
