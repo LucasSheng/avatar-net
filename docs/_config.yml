@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 title: Avatar-Net
 description: Multi-scale Zero-shot Style Transfer by Feature Decoration
+show_downloads: true
