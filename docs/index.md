@@ -39,10 +39,35 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 The result by Avatar-Net receives concrete multi-scale style patterns (e.g. color distribution, brush strokes and circular patterns in the style image). WCT distorts the brush strokes and circular patterns. AdaIN cannot even keep the color distribution, while style-swap fails in this example.
 
 #### Execution Efficiency
-|      Method       | Gatys et. al. | AdaIN | WCT   | Style-Swap | __Avatar-Net__ |
-| ----------------- | ------------- | ----- | ----- | ---------- | -------------- |
-| __256x256 (sec)__ | 12.18         | 0.053 | 0.62  | 0.064      | __0.071__      |
-| __512x512 (sec)__ | 43.25         | 0.11  | 0.93  | 0.23       | __0.28__       |
+
+<table>
+<tbody>
+<tr>
+<td>Method</td>
+<td>Gatys et. al.</td>
+<td>AdaIN</td>
+<td>WCT</td>
+<td>Style-Swap</td>
+<td>Avatar-Net</td>
+</tr>
+<tr>
+<td>256x256 (sec)</td>
+<td>12.18</td>
+<td>0.053</td>
+<td>0.62</td>
+<td>0.064</td>
+<td>0.071</td>
+</tr>
+<tr>
+<td>512x512 (sec)</td>
+<td>43.25</td>
+<td>0.11</td>
+<td>0.93</td>
+<td>0.23</td>
+<td>0.28</td>
+</tr>
+</tbody>
+</table>  
 
 - Avatar-Net has a comparable executive time as AdaIN and GPU-accelerated Style-Swap, and is much faster than WCT and the optimization-based style transfer by Gatys _et. al._.
 
