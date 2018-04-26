@@ -42,8 +42,7 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 
 #### Execution Efficiency
 
-<div align="center">
-<table>
+<table style="text-align:center;">
 <tbody>
 <tr>
 <td>Method</td>
@@ -71,7 +70,6 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 </tr>
 </tbody>
 </table>
-</div>
 
 - Avatar-Net has a comparable executive time as AdaIN and GPU-accelerated Style-Swap, and is much faster than WCT and the optimization-based style transfer by Gatys _et. al._.
 
