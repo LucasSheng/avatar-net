@@ -88,8 +88,8 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 
 #### Video Stylization ([the Youtube link](https://youtu.be/amaeqbw6TeA))
 
-<div style="position:relative;">
-<iframe style="position:absolute;" width="100%" height="100%" align="center" src="https://www.youtube.com/embed/amaeqbw6TeA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div style="psotion:relative;padding-bottom:56.25%;padding-top:25px;height:0;">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" align="center" src="https://www.youtube.com/embed/amaeqbw6TeA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 ## Code
