@@ -42,7 +42,7 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 
 #### Execution Efficiency
 
-<div style="padding-top: 10px; padding-right: 30px; padding-bottom: 10px; padding-left: 30px;">
+<div style="padding-top: 20px; padding-bottom: 20px;">
 <table>
 <tbody align="center">
 <tr>
@@ -88,7 +88,7 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 
 #### Video Stylization ([the Youtube link](https://youtu.be/amaeqbw6TeA))
 
-<iframe width="832" height="468" align="center" src="https://www.youtube.com/embed/amaeqbw6TeA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe align="center" src="https://www.youtube.com/embed/amaeqbw6TeA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Code
 
