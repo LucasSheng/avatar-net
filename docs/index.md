@@ -84,11 +84,9 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 [trade_off]: ./figures/trade_off.png
 ![trade_off]
 
-#### Video Stylization (click the image or [the Youtube link](https://youtu.be/amaeqbw6TeA))
-[video_snapshot]: ./figures/snapshot.png
-[![video_snapshot]](https://youtu.be/amaeqbw6TeA)
+#### Video Stylization ([the Youtube link](https://youtu.be/amaeqbw6TeA))
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/amaeqbw6TeA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="960" height="540" align="center" src="https://www.youtube.com/embed/amaeqbw6TeA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Code
 
