@@ -26,22 +26,24 @@ By embedding this module into a reconstruction network that fuses multi-scale st
 
 ## Results
 
-We demonstrate the state-of-the-art effectiveness and efficiency of the proposed method in generating high-quality stylized images, with a series of successful applications including multiple style integration, video stylization and etc.
-
 [image_results]: ./figures/image_results.png
 ![image_results]
 <p align = 'center'><small>Exemplar stylized results by the proposed Avatar-Net.</small></p>
+
+We demonstrate the state-of-the-art effectiveness and efficiency of the proposed method in generating high-quality stylized images, with a series of successful applications including multiple style integration, video stylization and etc.
 
 #### Comparison with Prior Arts
 
 <p align='center'><img src="figures/closed_ups.png" width="600"></p>
 
-<p align = 'center'><small>The result by Avatar-Net receives concrete multi-scale style patterns (e.g. color distribution, brush strokes and circular patterns in the style image). WCT distorts the brush strokes and circular patterns. AdaIN cannot even keep the color distribution, while style-swap fails in this example.</small></p>
+- The result by Avatar-Net receives concrete multi-scale style patterns (e.g. color distribution, brush strokes and circular patterns in the style image).
+
+- WCT distorts the brush strokes and circular patterns. AdaIN cannot even keep the color distribution, while style-swap fails in this example.
 
 #### Execution Efficiency
 
 <table>
-<tbody>
+<tbody align='center'>
 <tr>
 <td>Method</td>
 <td>Gatys et. al.</td>
