@@ -88,6 +88,8 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 [video_snapshot]: ./figures/snapshot.png
 [![video_snapshot]](https://youtu.be/amaeqbw6TeA)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/amaeqbw6TeA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ## Code
 
 Please refer to the [GitHub repository](https://github.com/LucasSheng/avatar-net) for more details. 
