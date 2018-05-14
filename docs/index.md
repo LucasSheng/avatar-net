@@ -37,7 +37,6 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 <p align='center'><img src="figures/closed_ups.png" width="600"></p>
 
 - The result by Avatar-Net receives concrete multi-scale style patterns (e.g. color distribution, brush strokes and circular patterns in the style image).
-
 - WCT distorts the brush strokes and circular patterns. AdaIN cannot even keep the color distribution, while style-swap fails in this example.
 
 #### Execution Efficiency
@@ -74,7 +73,6 @@ We demonstrate the state-of-the-art effectiveness and efficiency of the proposed
 </div>
 
 - Avatar-Net has a comparable executive time as AdaIN and GPU-accelerated Style-Swap, and is much faster than WCT and the optimization-based style transfer by Gatys _et. al._.
-
 - The reference methods and the proposed Avatar-Net are implemented on a same TensorFlow platform with a same VGG network as the backbone.
 
 ### Applications
@@ -98,7 +96,7 @@ Please refer to the [GitHub repository](https://github.com/LucasSheng/avatar-net
 
 ## Publication
 
-Lu Sheng, Ziyi Lin, Jing Shao and Xiaogang Wang, "Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration", in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.  [[PDF]()]  [[Arxiv]()]
+Lu Sheng, Ziyi Lin, Jing Shao and Xiaogang Wang, "Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration", in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.  [[Arxiv](https://arxiv.org/abs/1805.03857)]
 
 ```
 @inproceedings{sheng2018avatar,
