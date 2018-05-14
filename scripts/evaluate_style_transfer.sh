@@ -2,15 +2,26 @@
 
 MODEL_TYPE=$1
 CUDA_ID=$2
+
+# blending weights between style and contents
 WEIGHT=$3
 
-CONTENT_DATASET_DIR=/DATA/lsheng/lsheng_data/content_examplar
-STYLE_DATASET_DIR=/DATA/lsheng/lsheng_data/source_dataset/simple
+# content image folders:
+#   exemplar content images: ./data/contents/images/
+#   exemplar content videos: ./data/contents/sequences/
+CONTENT_DATASET_DIR=./data/contents/sequences/
 
-CONFIG_DIR=/home/lsheng/lsheng_models/avatar-net/configs
+# style image folders: ./data/styles/
+STYLE_DATASET_DIR=./data/styles/
 
+# output image folders: ./results/sequences/
+EVAL_DIR=./results/sequences/
+
+# network configuration
+CONFIG_DIR=./configs
+
+# the network path for the trained auto-encoding network
 TRAIN_DIR=/DATA/lsheng/lsheng_model_checkpoints/style_transfer_models/${MODEL_TYPE}/train
-EVAL_DIR=/DATA/lsheng/lsheng_model_checkpoints/style_transfer_models/${MODEL_TYPE}/eval
 
 CUDA_VISIBLE_DEVICES=${CUDA_ID} \
     python evaluate_style_transfer.py \

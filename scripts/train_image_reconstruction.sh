@@ -4,9 +4,13 @@ MODEL_TYPE=$1
 CUDA_ID=$2
 LEARNING_RATE=$3
 
+# MSCOCO tfexample dataset path
 DATASET_DIR=/DATA/lsheng/lsheng_data/MSCOCO
-CONFIG_DIR=/home/lsheng/lsheng_models/avatar-net/configs
 
+# network configuration
+CONFIG_DIR=./configs
+
+# model storage
 MODEL_DIR=/DATA/lsheng/lsheng_model_checkpoints/style_transfer_models/${MODEL_TYPE}
 TRAIN_DIR=${MODEL_DIR}/train
 

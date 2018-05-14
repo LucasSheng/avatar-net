@@ -95,11 +95,9 @@ def main(_):
         inp_style_image = tf.placeholder(tf.float32, shape=(None, None, 3))
 
         # preprocess the content and style images
-        content_image = preprocessing.aspect_preserving_resize(
-            inp_content_image,
-            smallest_side=style_model.content_size)
-        content_image = preprocessing.mean_image_subtraction(content_image)
+        content_image = preprocessing.mean_image_subtraction(inp_content_image)
         content_image = tf.expand_dims(content_image, axis=0)
+        # style resizing and cropping
         style_image = preprocessing.preprocessing_image(
             inp_style_image,
             448,
@@ -108,7 +106,10 @@ def main(_):
         style_image = tf.expand_dims(style_image, axis=0)
 
         # style transfer
-        stylized_image = style_model.transfer_styles(content_image, style_image, inter_weight=FLAGS.inter_weight)
+        stylized_image = style_model.transfer_styles(
+            content_image,
+            style_image,
+            inter_weight=FLAGS.inter_weight)
         stylized_image = tf.squeeze(stylized_image, axis=0)
 
         # gather the test image filenames and style image filenames

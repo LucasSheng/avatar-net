@@ -24,11 +24,11 @@ style_loss_layers:
 # patch size for style decorator
 patch_size: 5
 
-# blending weight
-blending_weight: 0.8
-
-# the style encoding method for the style decorator
+# style encoding method
 style_coding: 'ZCA' # 'AdaIN'
+
+# style interpolation
+style_interp: 'normalized'
 
 ####################
 # training routine #

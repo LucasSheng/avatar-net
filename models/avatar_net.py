@@ -30,27 +30,37 @@ class AvatarNet(object):
         # the loss layers for content and style similarity
         self.style_loss_layers = options.get('style_loss_layers')
 
-        # style decorator option
-        # 'AdaIN': adaptive instance normalization
-        # 'ZCA': zero-phase component analysis
+        ##########################
+        # style decorator option #
+        ##########################
+        # style coding method
         self.style_coding = options.get('style_coding')
 
-        # window size for the patch swapper
+        # style interpolation method
+        self.style_interp = options.get('style_interp')
+
+        # window size
         self.patch_size = options.get('patch_size')
 
-        # training quantities
+        #######################
+        # training quantities #
+        #######################
         self.content_weight = options.get('content_weight')
         self.recons_weight = options.get('recons_weight')
         self.tv_weight = options.get('tv_weight')
         self.weight_decay = options.get('weight_decay')
 
-        # gather summaries and initialize the losses
+        ##############################################
+        # gather summaries and initialize the losses #
+        ##############################################
         self.total_loss = 0.0
         self.recons_loss = None
         self.content_loss = None
         self.tv_loss = None
 
-        # summary and training ops
+        ############################
+        # summary and training ops #
+        ############################
         self.train_op = None
         self.summaries = None
 
@@ -105,10 +115,11 @@ class AvatarNet(object):
                 hidden_feature,
                 style_features[selected_layer],
                 style_coding=self.style_coding,
+                style_interp=self.style_interp,
+                ratio_interp=inter_weight,
                 patch_size=self.patch_size)
             blended_feature += intra_weights[n] * swapped_feature
             n += 1
-        blended_feature = (1 - inter_weight) * hidden_feature + inter_weight * blended_feature
 
         # 4) decode the hidden feature to the output image
         with slim.arg_scope(vgg_decoder.vgg_decoder_arg_scope()):
@@ -224,6 +235,8 @@ class AvatarNet(object):
 def style_decorator(content_features,
                     style_features,
                     style_coding='ZCA',
+                    style_interp='normalized',
+                    ratio_interp=1.0,
                     patch_size=3):
     """style decorator for high-level feature interaction
 
@@ -231,6 +244,8 @@ def style_decorator(content_features,
         content_features: a tensor of size [batch_size, height, width, channel]
         style_features: a tensor of size [batch_size, height, width, channel]
         style_coding: projection and reconstruction method for style coding
+        style_interp: interpolation option
+        ratio_interp: interpolation ratio
         patch_size: a 0D tensor or int about the size of the patch
     """
     # feature projection
@@ -242,6 +257,9 @@ def style_decorator(content_features,
     # feature rearrangement
     rearranged_features = nearest_patch_swapping(
         projected_content_features, projected_style_features, patch_size=patch_size)
+    if style_interp == 'normalized':
+        rearranged_features = ratio_interp * rearranged_features + \
+                              (1 - ratio_interp) * projected_content_features
 
     # feature reconstruction
     reconstructed_features = reconstruct_features(
@@ -249,33 +267,33 @@ def style_decorator(content_features,
         style_kernels,
         mean_style_features,
         reconstruction_module=style_coding)
+
+    if style_interp == 'biased':
+        reconstructed_features = ratio_interp * reconstructed_features + \
+                                 (1 - ratio_interp) * content_features
+
     return reconstructed_features
 
 
 def project_features(features, projection_module='ZCA'):
-    if projection_module is 'ZCA':
-        projected_features, feature_kernels, mean_features = zca_normalization(features)
-    elif projection_module is 'AdaIN':
-        projected_features, feature_kernels, mean_features = adain_normalization(features)
+    if projection_module == 'ZCA':
+        return zca_normalization(features)
+    elif projection_module == 'AdaIN':
+        return adain_normalization(features)
     else:
-        projected_features = features
-        feature_kernels, mean_features = None, None
-    return projected_features, feature_kernels, mean_features
+        return features, None, None
 
 
 def reconstruct_features(projected_features,
                          feature_kernels,
                          mean_features,
                          reconstruction_module='ZCA'):
-    if reconstruction_module is 'ZCA':
-        reconstructed_features = zca_colorization(
-            projected_features, feature_kernels, mean_features)
-    elif reconstruction_module is 'AdaIN':
-        reconstructed_features = adain_colorization(
-            projected_features, feature_kernels, mean_features)
+    if reconstruction_module == 'ZCA':
+        return zca_colorization(projected_features, feature_kernels, mean_features)
+    elif reconstruction_module == 'AdaIN':
+        return adain_colorization(projected_features, feature_kernels, mean_features)
     else:
-        reconstructed_features = projected_features
-    return reconstructed_features
+        return projected_features
 
 
 def nearest_patch_swapping(content_features, style_features, patch_size=3):
