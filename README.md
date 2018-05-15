@@ -40,7 +40,7 @@ In this repository, we propose an efficient and effective Avatar-Net that enable
 - Heavily depend on [TF-Slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim) and its [model repository](https://github.com/tensorflow/models/tree/master/research/slim).
 
 ## Download
-- The trained model of Avatar-Net can be downloaded through the [Google Drive]().
+- The trained model of Avatar-Net can be downloaded through the [Google Drive](https://drive.google.com/open?id=1_7x93xwZMhCL-kLrz4B2iZ01Y8Q7SlTX).
 - The training of our style transfer network requires pretrained [VGG](https://arxiv.org/abs/1409.1556) networks, and they can be obtained from the [TF-Slim model repository](ttps://github.com/tensorflow/models/tree/master/research/slim). The encoding layers of Avatar-Net are also borrowed from pretrained VGG models.
 - [MSCOCO](http://cocodataset.org/#home) dataset is applied for the training of the proposed image reconstruction network.
 
